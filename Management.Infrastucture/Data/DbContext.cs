@@ -7,6 +7,7 @@ namespace Management.Infrastucture.Data
 {
     public class DbContext
     {
-     public Student
+        public Student[] Students { get ; set; }
+        
     }
 }
