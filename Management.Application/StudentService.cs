@@ -12,6 +12,10 @@ namespace Management.Application
         }
         public void AddStudent(string firstName, string lastName)
         {
+            if(this.DbContext.StudentCount >= this.DbContext.Students.Length)
+            {
+                return;
+            }
             Student newStudent = new Student
             {
                 Id = new Random().Next(1, 1000).ToString(),
@@ -21,6 +25,11 @@ namespace Management.Application
 
             this.DbContext.Students[this.DbContext.StudentCount] = newStudent;
             this.DbContext.StudentCount++;
+        }
+
+        public Student[] GetStudents()
+        {
+          return this.DbContext.Students;
         }
     }
 }
