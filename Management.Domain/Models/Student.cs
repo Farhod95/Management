@@ -1,4 +1,4 @@
-﻿namespace Management.Domain.Models
+﻿namespace ManagementDomain.Models
 {
     public class Student
     {
