@@ -1,12 +1,14 @@
-﻿using Management.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ManagementDomain.Models;
+
 
 namespace Management.Infrastucture.Data
 {
     public class DbContext
     {
+        public DbContext()
+        {
+            this.Students = new Student[12]; 
+        }
         public Student[] Students { get ; set; }
         
     }
